@@ -1,0 +1,161 @@
+#monster {
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    overflow: auto;
+    width: 10em;
+    height: 15em;
+    -webkit-animation: pracima_m 4s infinite;
+    animation: pracima_m 4s infinite;
+}
+
+.antena {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: .8em;
+    height: 3em;
+}
+
+#antena_d {
+    right: 34%;
+    -webkit-transform: rotate(10deg);
+    transform: rotate(10deg);
+    -webkit-animation: antena_d 4s infinite;
+    animation: antena_d 4s infinite;
+}
+
+#antena_e {
+    left: 34%;
+    -webkit-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+    -webkit-animation: antena_e 4s infinite;
+    animation: antena_e 4s infinite;
+}
+
+.antena_up {
+    width: .8em;
+    height: .8em;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    border-radius: 50%;
+    background: #4CA5FF;
+    -webkit-box-shadow: inset -.1em -.08em rgba(0,0,0,.1);
+    box-shadow: inset -.1em -.08em rgba(0,0,0,.1);
+}
+
+.antena_body {
+    width: 0.4em;
+    height: 100%;
+    position: absolute;
+    top: .2em;
+    left: .2em;
+    background: #4CA5FF;
+}
+
+#body {
+    margin: 14% 0 0;
+    width: 10em;
+    height: 10em;
+    background: #4CA5FF;
+    border-radius: 50%;
+    -webkit-box-shadow: inset -.1em -1em rgba(0,0,0,.1);
+    box-shadow: inset -.1em -1em rgba(0,0,0,.1);
+}
+
+#eye {
+    position: relative;
+    width: 20%;
+    height: 20%;
+    margin: 0 auto;
+    top: 20%;
+    background: #fff;
+    border-radius: 50%;
+    -webkit-animation: piscar 4s infinite, cima_rosto 4s infinite;
+    animation: piscar 4s infinite, cima_rosto 4s infinite;
+}
+
+#iris {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    overflow: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: #000;
+    border-radius: 50%;
+}
+
+#mouth {
+    display:block;
+    width: 40%;
+    height: 15%;
+    background:rgba(0,0,0,.9);
+    border-radius:0 0 50% 50%;
+    position: absolute;
+    left: 0;
+    top: 43.5%;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    -webkit-animation: boca 4s infinite, cima_rosto 4s infinite;
+    animation: boca 4s infinite, cima_rosto 4s infinite;
+}
+
+#tooth {
+    display:block;
+    width: 10%;
+    height: 7%;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    top: 43.5%;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    -webkit-animation: pracima 4s infinite;
+    animation: pracima 4s infinite;
+}
+
+.teeth {
+    width: 35%;
+    height: 60%;
+    background: #fff;
+    border: 0;
+    margin: 0 7%;
+    float: left;
+    border-radius: 0 0 25% 25%;
+}
+
+.shadow {
+    height: 20px;
+    background: rgba(0,0,0,.1);
+    width: 70%;
+    border-radius: 100%;
+    margin: -15px 0 0 30%;
+    transition: .3s;
+    z-index: -1;
+    position: absolute;
+}
+
+@-webkit-keyframes piscar { 14% {opacity: 1;} 15% {opacity: 0} 16% {opacity: 0} 17% {opacity: 1;} 34% {opacity: 1;} 35% {opacity: 0} 36% {opacity: 0} 37% {opacity: 1} }
+@keyframes piscar { 14% {opacity: 1;} 15% {opacity: 0} 16% {opacity: 0} 17% {opacity: 1;} 34% {opacity: 1;} 35% {opacity: 0} 36% {opacity: 0} 37% {opacity: 1} }
+
+@-webkit-keyframes boca { 20% {height: 15%;} 35% {height: 18%;} 45% {height: 15%;} }
+@keyframes boca { 20% {height: 15%;} 35% {height: 18%;} 45% {height: 15%;} }
+
+@-webkit-keyframes cima_rosto { 50% {-webkit-transform:translateY(0);} 60% {-webkit-transform:translateY(-7%);} 70% {-webkit-transform:translateY(-7%);} 80% {-webkit-transform:translateY(0);} }
+@keyframes cima_rosto { 50% {transform:translateY(0);} 60% {transform:translateY(-7%);} 70% {transform:translateY(-7%);} 80% {transform:translateY(0);} }
+
+@-webkit-keyframes pracima { 50% {-webkit-transform:translateY(0);} 60% {-webkit-transform:translateY(-15%);} 70% {-webkit-transform:translateY(-15%);} 80% {-webkit-transform:translateY(0);} }
+@keyframes pracima { 50% {transform:translateY(0);} 60% {transform:translateY(-15%);} 70% {transform:translateY(-15%);} 80% {transform:translateY(0);} }
+ 
+@-webkit-keyframes pracima_m { 50% {-webkit-transform:translateY(0);} 60% {-webkit-transform:translateY(-1%);} 70% {-webkit-transform:translateY(-1%);} 80% {-webkit-transform:translateY(0);} }
+@keyframes pracima_m { 50% {transform:translateY(0);} 60% {transform:translateY(-1%);} 70% {transform:translateY(-1%);} 80% {transform:translateY(0);} }
+
+@-webkit-keyframes antena_d { 50% {-webkit-transform: rotate(20deg);} }
+@keyframes antena_d { 50% {-webkit-transform: rotate(20deg);} }
+ 
+@-webkit-keyframes antena_e { 50% {-webkit-transform: rotate(-20deg);} }
+@keyframes antena_e { 50% {-webkit-transform: rotate(-20deg);} }
